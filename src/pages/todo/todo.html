@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-icon name="menu" menuToggle padding left color="primary"></ion-icon>
+    <ion-title>
+      ToDo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" floating>Floating Label</ion-label>
+    <ion-input [(ngModel)]="text"></ion-input>
+  </ion-item>
+  <button ion-button float-right icon-left color="primary" (click)="add($event)">
+    <ion-icon name="add"></ion-icon>
+    Add
+  </button>
+  <ion-item *ngFor="let item of items; let i = index;" [ngClass]="{'line-through': item.completed }">
+    {{item.text}}
+    <button ion-button float-right color="danger" (click)="delete(i)">
+      Delete
+    </button>
+    <button ion-button float-right color="secondary" *ngIf="!item.completed" (click)="setCompleted(i, true)">
+      Done
+    </button>
+    <button ion-button float-right color="primary" *ngIf="item.completed" (click)="setCompleted(i, false)">
+      Reopen
+    </button>
+  </ion-item>
+</ion-content>
