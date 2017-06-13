@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { TodoPage } from '../pages/todo/todo';
+import { CameraPage } from '../pages/camera/camera';
 @Component({
   templateUrl: 'app.html'
 })
@@ -24,7 +25,8 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Home', component: HomePage },
-    { title: 'Todo', component: TodoPage }
+    { title: 'Todo', component: TodoPage },
+    { title: 'Camera', component: CameraPage }
   ];
 
   openPage(page) {
