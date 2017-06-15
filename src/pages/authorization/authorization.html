@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Authorization
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" floating>Login</ion-label>
+    <ion-input [(ngModel)]="login" #inputLogin></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password" #inputPassword></ion-input>
+  </ion-item>
+  <p>{{message}}</p>
+  <button ion-button float-right color="primary" (click)="logIn(login, password)">
+    Log in
+  </button>
+</ion-content>

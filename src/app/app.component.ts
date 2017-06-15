@@ -3,6 +3,7 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AuthorizationPage } from '../pages/authorization/authorization';
 import { HomePage } from '../pages/home/home';
 import { TodoPage } from '../pages/todo/todo';
 import { CameraPage } from '../pages/camera/camera';
@@ -10,7 +11,7 @@ import { CameraPage } from '../pages/camera/camera';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage: any = AuthorizationPage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -24,9 +25,9 @@ export class MyApp {
   }
 
   pages: any[] = [
-    { title: 'Home', component: HomePage },
-    { title: 'Todo', component: TodoPage },
-    { title: 'Camera', component: CameraPage }
+    {title: 'Home', component: HomePage},
+    {title: 'Todo', component: TodoPage},
+    {title: 'Camera', component: CameraPage}
   ];
 
   openPage(page) {
