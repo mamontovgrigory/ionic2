@@ -35,4 +35,5 @@ import { CameraPage } from '../pages/camera/camera';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+}

@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-todo',
@@ -8,6 +8,7 @@ import {NavController} from 'ionic-angular';
 export class TodoPage {
   text: string;
   items: { text: string, completed: boolean }[];
+  @ViewChild('inputText') inputText;
 
   constructor(public navCtrl: NavController) {
     this.text = '';
@@ -21,6 +22,8 @@ export class TodoPage {
         text: this.text
       });
       this.text = '';
+    } else {
+      this.inputText.setFocus();
     }
   }
 

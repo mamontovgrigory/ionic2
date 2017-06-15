@@ -12,7 +12,7 @@
 <ion-content padding>
   <ion-item>
     <ion-label color="primary" floating>Floating Label</ion-label>
-    <ion-input [(ngModel)]="text"></ion-input>
+    <ion-input [(ngModel)]="text" #inputText></ion-input>
   </ion-item>
   <button ion-button float-right icon-left color="primary" (click)="add($event)">
     <ion-icon name="add"></ion-icon>
